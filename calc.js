@@ -79,11 +79,6 @@ operators.forEach((operator) => {
   });
 });
 
-window.addEventListener("keyup", (e) => {
-  if (e.key.toLocaleLowerCase() === "enter") {
-    //  TODO dfkjdsgbfkdgkdjhj
-  }
-});
 
 numbers.forEach((number) => {
   number.addEventListener("click", (e) => {
