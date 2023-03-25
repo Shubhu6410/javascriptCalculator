@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 1rem;
+    justify-content: center;
+    color: rgb(56, 56, 56);
+}
+
+.main-wrapper {
+    display: grid;
+    grid-template-rows: 100px auto;
+    max-width: 320px;
+    height: auto;
+    border-radius: 5px;
+    gap: 1rem;    
+}
+
+header {
+    padding: 0.6rem 0;
+}
+
+header h3{
+    font-size: clamp(20px, 6vw, 14px);
+    margin-bottom: .5rem;
+}
+
+header p{
+    font-size: 12px;
+    font-weight: 600;
+    color: rgb(94, 94, 94);
+    letter-spacing: .4px;
+}
+
+.calculator{
+    padding-block: .5rem;
+    min-height: 350px;
+    display: grid;
+    grid-template-rows: 100px auto;
+    box-shadow: 0 1px 10px 0 rgba(0,0,0,0.2);
+}
+
+.calculator .result {
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: .7rem;
+    text-align: right;
+    border-bottom: 2px solid rgb(202, 202, 202);
+}
+
+.result .current-input {
+    font-size: 24px;
+}
+
+.result .previous {
+    color: grey;
+    font-style: oblique;
+}
+
+.result .previous,
+.result .current-input{
+    width: 100%;
+}
+
+.calculator .inputs{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding-inline: 1rem;
+    padding-block-start: .7rem;
+}
+
+.calculator .inputs .btn {
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition:  all 100ms ease-in-out;
+    font-weight: bold;
+    outline: none;
+}
+
+.calculator .inputs .btn:active{
+    transform: scale(0.9);
+    background-color: rgb(182, 182, 182);
+}
+
+.calculator .inputs .btn.operator {
+    background-color: rgb(94, 98, 131);
+    color:  #fff;
+}
+
+.calculator .inputs .btn.operator:active{
+    filter: brightness(50%);
+}
+
+.calculator .inputs .btn.calc{
+    width: 100%;
+    background-color: rgb(89, 131, 73);
+    grid-column: 3 / 5;
+    border-radius: 5px;
+}
+
+#C{
+    grid-column: 4 / 5;
+    background-color: rgba(255, 118, 118, 0.39);
+    color: rgb(255, 55, 55);
+}
+
+#AC {
+    background-color: rgb(172, 97, 54);
+}
+
+
+@media screen and (width < 300px) {
+    .main-wrapper {
+        max-width: 90%;
+        width: 90%;
+    }
+}
