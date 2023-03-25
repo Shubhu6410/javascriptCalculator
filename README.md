@@ -1,4 +1,4 @@
 # javascriptCalculator
 
-# It is Simple JAVASCRIPT Calculator.
+ It is Simple JAVASCRIPT Calculator.
 
